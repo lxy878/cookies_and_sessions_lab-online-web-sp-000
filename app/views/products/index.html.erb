@@ -1,10 +1,8 @@
-<% if @items %>
-  <ul>
-    <% cart.each do |item|%>
-      <li> <%= item %></li>
-    <% end %>
-  </ul>
-<% end %>
+<ul>
+  <% cart.each do |product| %>
+    <li><%= product %></li>
+  <% end %>
+</ul>
 <%= form_tag '/', method: :post do %>
   <p>Product Name: <%= text_field_tag 'product' %></p>
   <%= submit_tag :'add to cart'%>
