@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
     new_cart = cart
     new_cart << params[:product]
     session[:cart] = new_cart
-    raise cart
+    raise cart.inspect
     render :index
   end
 end
