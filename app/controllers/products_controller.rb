@@ -7,6 +7,6 @@ class ProductsController < ApplicationController
     new_cart = cart
     new_cart << params[:product]
     session[:cart] = new_cart
-    render :index
+    redirect_to '/'
   end
 end
